@@ -459,9 +459,10 @@ var rily = Flower.crossPollinate(rose, lily);
 <img src="https://cloud.githubusercontent.com/assets/3254910/17948758/fe31c9e4-6a06-11e6-8c59-c68d975c02a8.png" alt="flower vase image from homeheavenimages on flickr" width=80%>
 
 
-1. Create a vase object which contains an array of flower objects and a `capacity` attribute that says how many flowers the vase can hold.
+1. Create a Vase constructor. A Vase should contain an array of flower objects and a `capacity` attribute that says how many flowers the vase can hold.
 
   <details><summary>sample solution</summary>
+  
    ```js
    function Vase (capacity){
    	this.capacity = capacity || 12;
@@ -471,7 +472,9 @@ var rily = Flower.crossPollinate(rose, lily);
   </details>
   
 1. Create a method `placeFlower` that accepts a flower object as a parameter and inserts the flower into the array. What if the vase is too small? Update your method so that it checks whether the vase is already holding its capacity of flowers before it adds the extra flower. 
+
     <details><summary>sample solution</summary>
+    
    ```js
    Vase.prototype.placeFlower = function(flower){
      if (this.flowers.length < this.capacity){
@@ -481,6 +484,7 @@ var rily = Flower.crossPollinate(rose, lily);
      }
    }
    ```
+   
   </details>
   
 1. Create an `addWater` method for a vase that calls the `water` method of each flower inside.
